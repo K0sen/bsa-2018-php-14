@@ -1,0 +1,12 @@
+@import "variables.scss";
+
+body {
+  max-width: $max-width;
+  margin: 0 auto;
+  font-size: $main-font-size;
+}
+
+.icon {
+  font-size: 3rem;
+  color: black;
+} 
