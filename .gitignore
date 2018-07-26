@@ -1,3 +1,26 @@
 .idea
 node_modules
 package-lock.json
+
+
+
+    <header class="header">
+        <img class="header__logo" src="assets/images/eagle-logo.png" alt="eagle-logo">
+        <!-- begin header__icons -->
+        <div class="header__icons">
+            <a href="#" class="icon"><i class="fa fa-github wow flipInX" data-wow-delay="0.6s"></i></a>
+            <a class="icon"></a>
+            <a class="icon"></a>
+            <a class="icon"></a>
+            <a class="icon icon-search"></a>
+        </div>
+        <!-- end header__icons -->
+        <!-- begin header__menu -->
+        <div class="header__menu">
+            
+        </div>
+        <!-- end header__menu -->
+    </header>
+    <main></main>
+    <aside></aside>
+    <footer></footer>
