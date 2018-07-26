@@ -4,9 +4,10 @@ body {
   max-width: $max-width;
   margin: 0 auto;
   font-size: $main-font-size;
+  background-image: url(http://bgfons.com/upload/stars_texture2954.jpg);
 }
 
 .icon {
-  font-size: 3rem;
-  color: black;
+  font-size: 2rem;
+  color: $red;
 } 
