@@ -1,7 +1,37 @@
 @import "global.scss";
 
+.wrapper {
+  display: grid;
+  grid-template-columns: 1fr 250px;
+  grid-template-rows: repeat(4, minmax(100px, max-content));
+  grid-gap: 10px;
+}
+
 .header {
-	&__logo {
-		max-height: 100px;
-	}
+  grid-column: 1/3;
+  background: green;
+  &__logo {
+    min-height: 100px;
+    max-height: 200px;
+  }
+}
+
+.main {
+  @media (max-width: $small-monitor) {
+    grid-column: 1/3;
+  }
+  height: 300px;
+  background: red;
+}
+
+.aside {
+  @media (max-width: $small-monitor) {
+    grid-column: 1/3;
+  }
+  background: purple;
+} 
+
+.footer {
+  grid-column: 1/3;
+  background: black;
 }
