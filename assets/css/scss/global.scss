@@ -1,5 +1,9 @@
 @import "variables.scss";
 
+* {
+  box-sizing: border-box;
+}
+
 body {
   max-width: $max-width;
   margin: 0 auto;

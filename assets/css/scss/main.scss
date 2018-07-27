@@ -20,7 +20,6 @@
     min-height: 100px;
     max-height: 250px;
     @media (max-width: $small-monitor) {
-      // grid-row: 2/3;
       grid-column: 2/3;
     }
   }
@@ -98,9 +97,52 @@
 .main {
   background-color: white;
   display: grid;
-  grid-template-columns: repeat(auto-fill, 300px);
+  grid-template-columns: repeat(auto-fit, minmax(255px, 1fr));
   grid-gap: 10px;
+  align-items: center;
   justify-content: center;
+  // grid-column-align: center;
+  // display: flex;
+  // flex-direction: row;
+  // flex-wrap: wrap;
+  // justify-content: space-between;
+  // align-content: space-around;
+  .post {
+    max-width: 400px;
+    min-width: 200px;
+    padding: 15px;
+
+    * {
+      margin-bottom: 10px;
+    }
+
+    &__image {
+      width: 100%;
+    }
+
+    &__info {
+      
+    }
+
+    &__title {
+      font-size: 2rem;
+      &:before {
+        content: 'Title: ';
+        font-style: italic;
+      }
+    }
+
+    &__author:before {
+      content: 'Author: ';
+      font-style: italic;
+    }
+
+    &__category:before {
+      content: 'Category: ';
+      font-style: italic;
+    }
+  }
+
   @media (max-width: $small-monitor) {
     grid-column: 1/3;
   }
@@ -119,6 +161,7 @@
   position: relative;
   overflow: hidden;
   background: url(../images/milk-for-kitty.jpg) 100% 190px;
+
   .cat {
     position: relative;
     height: 100px;
@@ -143,7 +186,7 @@
 }
 
 .hide-shame {
-  display: block;
+  display: none;
   position: fixed;
   background: #000;
   opacity: 0.9;
