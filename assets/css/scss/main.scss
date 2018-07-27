@@ -2,7 +2,7 @@
 
 .wrapper {
   display: grid;
-  grid-template-columns: 1fr 250px;
+  grid-template-columns: 1fr 400px;
   grid-template-rows: repeat(4, minmax(100px, max-content));
   grid-gap: 10px;
 }
@@ -34,13 +34,6 @@
     @media (max-width: $small-monitor) {
       grid-column: 3/3;
     }
-
-    .icon {
-      margin-right: 15px;	
-      &:last-child {
-        margin-right: 40px;
-      }
-    }
   }
 
   .socials {
@@ -51,6 +44,7 @@
 
   &__search {
     .icon-search {
+      margin: 0 45px;
       font-size: 45px;
       color: blue;
     }
@@ -99,15 +93,13 @@
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(255px, 1fr));
   grid-gap: 10px;
-  align-items: center;
-  justify-content: center;
-  // grid-column-align: center;
-  // display: flex;
-  // flex-direction: row;
-  // flex-wrap: wrap;
-  // justify-content: space-between;
-  // align-content: space-around;
+  justify-items: center;
+
   .post {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
     max-width: 400px;
     min-width: 200px;
     padding: 15px;
@@ -118,6 +110,21 @@
 
     &__image {
       width: 100%;
+
+      img {
+        width: 100%;
+      }
+    }
+
+    &__info {
+    }
+
+    &__description {
+      height: 55px;
+      overflow: hidden;
+      &:after {
+        content: '...';
+      }
     }
 
     &__title {
@@ -145,7 +152,26 @@
 }
 
 .aside {
-  background: purple;
+  background: white;
+  text-align: center;
+  .author {
+    &__name {
+      margin-bottom: 30px;
+      font-size: 3rem;
+    }
+    &__image {
+      padding: 5px;
+      max-width: 400px;
+      width: 100%;
+    }
+  }
+
+  .socials {
+    font-size: 2rem;
+    .icons i {
+      font-size: 222em;
+    }
+  }
   @media (max-width: $small-monitor) {
     grid-column: 1/3;
   }
@@ -182,7 +208,7 @@
 }
 
 .hide-shame {
-  display: block;
+  display: none;
   position: fixed;
   background: #000;
   opacity: 0.9;
