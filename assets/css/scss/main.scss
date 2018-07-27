@@ -237,10 +237,9 @@
     .comment {
       display: grid;
       grid-template-columns: 70px 1fr;
-      grid-template-rows: 30px 80px;
+      grid-template-rows: 30px 30px;
       align-items: center;
       margin-bottom: 10px;
-      border-bottom: 1px solid $red;
       text-align: left;
 
       &__image {
@@ -257,11 +256,9 @@
 
       &__text {
         align-self: start;
-        max-height: 80px;
         overflow: hidden;
-        display: -webkit-box;
-        -webkit-line-clamp: 3;
-        -webkit-box-orient: vertical;  
+        white-space: nowrap;
+        text-overflow: ellipsis;
       }
     }
   }
