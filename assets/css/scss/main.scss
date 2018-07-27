@@ -114,6 +114,7 @@
   grid-column: 1/3;
   background: white;
   position: relative;
+  overflow: hidden;
   background: url(../images/milk-for-kitty.jpg) 100% 190px;
   .cat {
     position: relative;
@@ -136,4 +137,20 @@
   100% {
     left: 0px;
   }
+}
+
+
+
+.hide-shame {
+  position: fixed;
+  background: #000;
+  opacity: 0.9;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  text-align: center;
+  font-size: 55px;
+  z-index: 10;
+  line-height: 300px;
 }
