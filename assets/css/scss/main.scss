@@ -120,10 +120,6 @@
       width: 100%;
     }
 
-    &__info {
-      
-    }
-
     &__title {
       font-size: 2rem;
       &:before {
@@ -186,7 +182,7 @@
 }
 
 .hide-shame {
-  display: none;
+  display: block;
   position: fixed;
   background: #000;
   opacity: 0.9;
