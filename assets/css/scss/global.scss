@@ -22,6 +22,10 @@ a:hover {
   color: black;
 }
 
+input:hover {
+  border: 1px solid $red;
+}
+
 .icon {
   font-size: 2rem;
   color: $red;
@@ -34,9 +38,23 @@ a:hover {
   border: 1px solid $red;
   transition: .3s ease-in-out;
   cursor: pointer;
+  text-transform: uppercase;
+  position: relative;
 
   &:hover {
     background-color: $red;
     color: white;
   }
+
+  // &:before {
+  //   content: '';
+  //   position: absolute;
+  //   top: -1px;
+  //   left: -16px;
+  //   width: 0;
+  //   height: 0;
+  //   border-color: transparent $red transparent transparent;
+  //   border-width: 15px 15px 15px 0;
+  //   border-style: solid;
+  // }
 }
