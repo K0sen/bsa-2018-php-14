@@ -61,7 +61,10 @@
     @import "hamburger.scss";
     grid-row: 2/2;
     grid-column: 2/4;
-    align-items: center;  // TODO
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+
     .hamburger span {
       display: none;
     }
@@ -139,9 +142,8 @@
   }
 }
 
-
-
 .hide-shame {
+  display: block;
   position: fixed;
   background: #000;
   opacity: 0.9;
